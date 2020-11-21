@@ -1,0 +1,60 @@
+body {
+  background: #7a86cb;
+  text-align: center;
+  padding: calc(50vh - 100px) 0;
+  overflow: hidden;
+}
+
+label {
+  position: relative;
+  left: -248px;
+  color: #e6e7f2;
+  font-family: "Barlow", sans-serif;
+  font-size: 12px;
+  transition: top 1s, color 1s;
+  top: 0;
+}
+
+input:focus:invalid + label {
+  color: #0027ff;
+  top: -23px;
+  background: #7a86cb;
+  transition: top 1s, color 1s, background 1s;
+}
+
+input:valid + label {
+  color: #383e5e;
+  top: -23px;
+  background: #7a86cb;
+  transition: top 1s, color 1s, background 1s;
+}
+
+input {
+  height: 40px;
+  width: 240px;
+  border: 1px solid #24283d;
+  background: #49517b;
+  padding-left: 8px;
+  border-radius: 5px;
+}
+
+input:focus:invalid {
+  border-color: #0027ff;
+  background: #7a86cb;
+  transition: border-color 1s, background 1s, color 1s;
+  outline: none;
+}
+
+input:valid {
+  border-color: #383e5e;
+  color: #383e5e;
+  font-size: 12px;
+  background: #7a86cb;
+  transition: border-color 1s, background 1s, color 1s;
+  outline: none;
+}
+
+input:valid:not(:focus) {
+  color: #e6e7f2;
+  transition: color 1s;
+}
